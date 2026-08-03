@@ -69,7 +69,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-x-4 top-[calc(100%+0.65rem)] rounded-2xl border border-navy/10 bg-cream/95 p-2 shadow-2xl shadow-navy/10 backdrop-blur-xl md:hidden"
+            className="absolute inset-x-4 top-[calc(100%+0.65rem)] rounded-2xl border border-navy/10 bg-cream/97 p-2 shadow-2xl shadow-navy/10 backdrop-blur-xl md:hidden"
           >
             <div className="space-y-1">
               {navLinks.map((link) => (

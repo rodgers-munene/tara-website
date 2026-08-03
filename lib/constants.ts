@@ -8,17 +8,19 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Product", href: "#product" },
-  { label: "Inventory", href: "#inventory" },
-  { label: "Marketplace", href: "#marketplace" },
-  { label: "Insights", href: "#insights" },
+  { label: "Product", href: "/#product" },
+  { label: "Inventory", href: "/#inventory" },
+  { label: "Marketplace", href: "/#marketplace" },
+  { label: "Insights", href: "/#insights" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 export const footerLinks = {
   product: [
-    { label: "Point of Sale", href: "#" },
-    { label: "Inventory Hub", href: "#" },
-    { label: "Marketplace", href: "#" },
+    { label: "Point of Sale", href: "/#product" },
+    { label: "Inventory Hub", href: "/#inventory" },
+    { label: "Marketplace", href: "/#marketplace" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Banking", href: "#" },
   ],
   company: [
