@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fff8f4;
   --foreground: #171717;
 }
 
@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-navy: #14213d;
+  --color-cream: #f7f1ea;
+  --color-tan: #ede0d0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +27,58 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(20 33 61 / 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(20 33 61 / 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.hero-phone {
+  animation: hero-float 7s ease-in-out infinite;
+}
+
+.hero-sales-card {
+  animation: hero-float 7s ease-in-out -1.5s infinite;
+}
+
+.hero-stock-card {
+  animation: hero-float 7s ease-in-out -3s infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-phone,
+  .hero-sales-card,
+  .hero-stock-card {
+    animation: none;
+  }
+}
+
+.receipt-scallop {
+  --bite: 8px;
+  -webkit-mask:
+    radial-gradient(circle var(--bite) at var(--bite) 0, transparent 100%, #000 101%)
+      top left / calc(var(--bite) * 2) var(--bite) repeat-x,
+    radial-gradient(circle var(--bite) at var(--bite) 100%, transparent 100%, #000 101%)
+      bottom left / calc(var(--bite) * 2) var(--bite) repeat-x,
+    linear-gradient(#000 0 0) top left / 100% calc(100% - 2 * var(--bite)) no-repeat;
+  mask:
+    radial-gradient(circle var(--bite) at var(--bite) 0, transparent 100%, #000 101%)
+      top left / calc(var(--bite) * 2) var(--bite) repeat-x,
+    radial-gradient(circle var(--bite) at var(--bite) 100%, transparent 100%, #000 101%)
+      bottom left / calc(var(--bite) * 2) var(--bite) repeat-x,
+    linear-gradient(#000 0 0) top left / 100% calc(100% - 2 * var(--bite)) no-repeat;
 }
