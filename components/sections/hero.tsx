@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
+import { siteConfig } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Reveal } from "@/components/motion/reveal";
@@ -29,7 +30,7 @@ export function Hero() {
             connected workspace—built for the pace of African commerce.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
-            <Button href="#get-started" className="group rounded px-6 py-3.5">
+            <Button href={siteConfig.ownerPortalUrl} className="group rounded px-6 py-3.5">
               Start selling
               <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>

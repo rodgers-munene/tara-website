@@ -40,7 +40,7 @@ export function Footer() {
             infrastructure. Building the foundation for the next generation
             of retailers.
           </p>
-          <Link href="#get-started" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cream transition-colors hover:text-emerald-200">
+          <Link href={siteConfig.ownerPortalUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-cream transition-colors hover:text-emerald-200">
             Start with Tara <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
         </div>

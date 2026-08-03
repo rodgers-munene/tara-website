@@ -4,6 +4,7 @@ export const siteConfig = {
   description:
     "Tara connects your physical sales, inventory, and online marketplace presence into one high-fidelity ecosystem for the scale of African commerce.",
   url: "https://tara.ekshop.store",
+  ownerPortalUrl: "https://tara.ekshop.store/owner/login",
 };
 
 export const navLinks = [

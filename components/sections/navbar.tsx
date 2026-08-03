@@ -38,12 +38,12 @@ export function Navbar() {
 
         <div className="hidden items-center gap-5 md:flex">
           <Link
-            href="#signin"
+            href={siteConfig.ownerPortalUrl}
             className="text-sm font-medium text-navy/65 transition-colors hover:text-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
           >
             Sign in
           </Link>
-          <Button href="#get-started" className="rounded px-5 py-2.5">
+          <Button href={siteConfig.ownerPortalUrl} className="rounded px-5 py-2.5">
             Get started
           </Button>
         </div>
@@ -85,7 +85,7 @@ export function Navbar() {
             </div>
             <div className="mt-2 border-t border-navy/10 p-2">
               <Link
-                href="#get-started"
+                href={siteConfig.ownerPortalUrl}
                 onClick={() => setIsOpen(false)}
                 className="flex w-full items-center justify-center rounded-xl bg-navy px-6 py-3 text-sm font-medium text-cream transition-opacity hover:opacity-90"
               >
