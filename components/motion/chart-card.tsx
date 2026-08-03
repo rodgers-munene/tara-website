@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 const bars = [0.4, 0.65, 0.5, 0.85, 0.6, 1];
 
 export function ChartCard() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className="rounded-2xl border border-white/40 bg-cream p-4 shadow-xl ring-1 ring-navy/5">
       <div className="flex items-center justify-between">
@@ -17,22 +19,25 @@ export function ChartCard() {
         </span>
       </div>
 
-      <div className="mt-4 flex h-16 items-end gap-2">
+      <div className="relative mt-4 h-16">
+        <div className="absolute inset-x-0 bottom-0 border-t border-navy/10" />
+        <div className="relative flex h-full items-end gap-2">
         {bars.map((height, i) => (
           <motion.span
             key={i}
-            className="w-full rounded-full bg-emerald-700/80"
-            style={{ transformOrigin: "bottom" }}
-            initial={{ scaleY: 0 }}
-            whileInView={{ scaleY: height }}
+            className="w-full rounded-t-md bg-emerald-700/80"
+            style={{ height: `${height * 100}%`, transformOrigin: "bottom" }}
+            initial={{ scaleY: shouldReduceMotion ? 1 : 0.08 }}
+            whileInView={{ scaleY: 1 }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.5,
-              delay: 0.08 * i,
+              duration: shouldReduceMotion ? 0 : 0.5,
+              delay: 0.08 * i + 0.15,
               ease: [0.22, 1, 0.36, 1],
             }}
           />
         ))}
+        </div>
       </div>
     </div>
   );
